@@ -123,8 +123,8 @@ if __name__ == "__main__":
     # Note: Set debug to False, when training on entire corpus
     debug = False
     # debug = False
-
     assert(torch.__version__ == "1.0.0"),  "Please install torch version 1.0.0"
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     print(80 * "=")
     print("INITIALIZING")
